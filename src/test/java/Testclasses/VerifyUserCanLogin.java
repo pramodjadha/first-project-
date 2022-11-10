@@ -58,7 +58,6 @@ public class VerifyUserCanLogin {
 	public void VerifyUserLogin() throws IOException {
 		
 		lp.enterEmailID();
-		
 		lp.enterPassword();
 		lp.clickOnLoginBtn();
 		
