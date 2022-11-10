@@ -58,6 +58,7 @@ public class VerifyUserCanLogin {
 	public void VerifyUserLogin() throws IOException {
 		
 		lp.enterEmailID();
+		
 		lp.enterPassword();
 		lp.clickOnLoginBtn();
 		
@@ -80,9 +81,9 @@ public class VerifyUserCanLogin {
 	public void aftermethod(ITestResult result) throws IOException {
           if(result.getStatus()==ITestResult.SUCCESS) 
        {
-    		test.log(Status.PASS, result.getName() + "is Passed");
-    		//String path =	Util1.getscreenshotpath(driver , result.getName());
-    	//	test.log(Status.PASS, result.getName() + "is Passed" , MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+    	//	test.log(Status.PASS, result.getName() + "is Passed");
+    		String path =	Util1.getscreenshotpath(driver , result.getName());
+    		test.log(Status.PASS, result.getName() + "is Passed" , MediaEntityBuilder.createScreenCaptureFromPath(path).build());
 
     		
        } else if(result.getStatus()==ITestResult.FAILURE) {
